@@ -29,7 +29,7 @@
   <div class="app-shell">
     <header class="hero">
       <div class="hero-topline">
-        <span class="status-pill">Nether Build v0.2</span>
+        <span class="status-pill">Nether Build v0.3</span>
         <button class="ghost-button" id="themeToggle" type="button" aria-label="Toggle ember intensity">✦</button>
       </div>
 
@@ -54,11 +54,18 @@
         <div>
           <p class="eyebrow">Nether forge dashboard</p>
           <h2 id="start-title">Choose a creation module</h2>
-          <p>Each button is a future generator module. This version focuses on the main page, the options, and a direct Nether-themed animated background.</p>
+          <p>Asset Vault is the first working system. The other modules are staged as creator options and will plug into the vault as they are built.</p>
         </div>
       </section>
 
       <section class="module-grid" aria-label="Creation modules">
+        <button class="module-card module-vault" type="button" data-module="asset-vault">
+          <span class="module-icon">▥</span>
+          <span class="module-title">Asset Vault</span>
+          <span class="module-desc">Store generated assets, import files, download entries, duplicate work, remove assets, and export backups.</span>
+          <span class="module-meta">storage · backup · download</span>
+        </button>
+
         <button class="module-card module-red" type="button" data-module="sprite-lab">
           <span class="module-icon">▣</span>
           <span class="module-title">Create Sprite</span>
@@ -126,6 +133,51 @@
         </div>
         <p id="previewText">Tap any module above to preview what it will become.</p>
         <div class="option-row" id="previewOptions"></div>
+      </section>
+
+      <section class="panel vault-panel" id="assetVault" aria-labelledby="vaultTitle" hidden>
+        <div class="vault-heading">
+          <div>
+            <p class="eyebrow">Working system</p>
+            <h2 id="vaultTitle">Asset Vault</h2>
+            <p>Assets saved here stay on this device/browser. Import files now, create demo assets, download individual entries, duplicate them, remove them, or export a backup JSON file.</p>
+          </div>
+          <span class="vault-stats" id="vaultStats">0 stored</span>
+        </div>
+
+        <div class="vault-toolbar" aria-label="Asset Vault controls">
+          <input id="vaultSearch" type="search" placeholder="Search assets, tags, descriptions..." autocomplete="off" />
+          <select id="vaultType" aria-label="Filter assets by type">
+            <option value="">All types</option>
+            <option value="sprite">Sprites / Images</option>
+            <option value="factory">Sprite Factory Packs</option>
+            <option value="book">Books / Text</option>
+            <option value="culture">Cultures</option>
+            <option value="language">Languages / Names</option>
+            <option value="model">3D Models</option>
+            <option value="sound">Sounds</option>
+            <option value="comic">Comics</option>
+            <option value="file">Other Files</option>
+          </select>
+        </div>
+
+        <div class="vault-command-row">
+          <button type="button" data-vault-command="demo">Create Demo Asset</button>
+          <button type="button" data-vault-command="import">Import File</button>
+          <button type="button" data-vault-command="export">Export Vault Backup</button>
+          <button type="button" data-vault-command="restore">Restore Backup</button>
+          <button class="danger-action" type="button" data-vault-command="clear">Clear Vault</button>
+        </div>
+
+        <input id="assetImport" type="file" multiple hidden />
+        <input id="vaultRestore" type="file" accept="application/json,.json" hidden />
+
+        <div class="vault-empty" id="vaultEmpty">
+          <strong>No assets stored yet.</strong>
+          <span>Create a demo asset or import a file to test the vault.</span>
+        </div>
+
+        <div class="vault-grid" id="vaultGrid" aria-live="polite"></div>
       </section>
     </main>
 

@@ -1,10 +1,10 @@
 {
   "name": "LoganCreations",
-  "short_name": "LoganCreate",
-  "description": "A Nether-styled mobile creative studio for sprites, books, cultures, models, sounds, comics, and asset packs.",
+  "short_name": "LoganCreations",
+  "description": "Nether-themed creative forge with an Asset Vault for storing and exporting generated assets.",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#120504",
+  "background_color": "#090202",
   "theme_color": "#2a0705",
   "orientation": "portrait-primary",
   "icons": [
