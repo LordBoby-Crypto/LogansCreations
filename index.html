@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#111827" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="LoganCreations" />
+  <title>LoganCreations</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-192.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div class="hero-topline">
+        <span class="status-pill">Creative Engine v0.1</span>
+        <button class="ghost-button" id="themeToggle" type="button" aria-label="Toggle theme">☾</button>
+      </div>
+
+      <div class="brand-block">
+        <div class="brand-mark" aria-hidden="true">LC</div>
+        <div>
+          <h1>LoganCreations</h1>
+          <p class="hero-subtitle">Build sprites, books, cultures, sounds, comics, models, and full creative packs from one mobile studio.</p>
+        </div>
+      </div>
+
+      <div class="quick-actions" aria-label="Project actions">
+        <button class="primary-action" type="button" data-action="new-project">New Project</button>
+        <button class="secondary-action" type="button" data-action="open-library">Asset Library</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel intro-panel" aria-labelledby="start-title">
+        <div>
+          <p class="eyebrow">Start creating</p>
+          <h2 id="start-title">Choose a creation module</h2>
+          <p>These buttons are the main launch points. The first version gives the app its structure; each module is ready to become a real generator next.</p>
+        </div>
+      </section>
+
+      <section class="module-grid" aria-label="Creation modules">
+        <button class="module-card" type="button" data-module="sprite-lab">
+          <span class="module-icon">◆</span>
+          <span class="module-title">Create Sprite</span>
+          <span class="module-desc">Design one original creature, item, icon, or character sprite.</span>
+          <span class="module-meta">PNG · variants · stats</span>
+        </button>
+
+        <button class="module-card" type="button" data-module="sprite-factory">
+          <span class="module-icon">▦</span>
+          <span class="module-title">Sprite Factory</span>
+          <span class="module-desc">Generate a full themed asset pack with creatures, icons, tiles, and metadata.</span>
+          <span class="module-meta">packs · atlas · ZIP</span>
+        </button>
+
+        <button class="module-card" type="button" data-module="novel-generator">
+          <span class="module-icon">✦</span>
+          <span class="module-title">Book / Novel Generator</span>
+          <span class="module-desc">Create premises, chapter plans, characters, settings, and story bibles.</span>
+          <span class="module-meta">outline · chapters · lore</span>
+        </button>
+
+        <button class="module-card" type="button" data-module="culture-generator">
+          <span class="module-icon">◈</span>
+          <span class="module-title">Culture Generator</span>
+          <span class="module-desc">Build civilizations with customs, laws, symbols, myths, and conflicts.</span>
+          <span class="module-meta">worlds · factions · dossiers</span>
+        </button>
+
+        <button class="module-card" type="button" data-module="language-engine">
+          <span class="module-icon">⌁</span>
+          <span class="module-title">Language / Name Engine</span>
+          <span class="module-desc">Generate consistent names, roots, places, gods, monsters, and dictionaries.</span>
+          <span class="module-meta">roots · names · dictionary</span>
+        </button>
+
+        <button class="module-card" type="button" data-module="model-generator">
+          <span class="module-icon">⬡</span>
+          <span class="module-title">3D Model Generator</span>
+          <span class="module-desc">Create procedural relics, weapons, crystals, masks, towers, and props.</span>
+          <span class="module-meta">WebGL · JSON · renders</span>
+        </button>
+
+        <button class="module-card" type="button" data-module="sound-generator">
+          <span class="module-icon">≋</span>
+          <span class="module-title">Monster Sound Generator</span>
+          <span class="module-desc">Build roars, clicks, growls, whispers, attacks, and death sounds.</span>
+          <span class="module-meta">WAV · layers · waveform</span>
+        </button>
+
+        <button class="module-card" type="button" data-module="comic-generator">
+          <span class="module-icon">▣</span>
+          <span class="module-title">Comic Generator</span>
+          <span class="module-desc">Create panel layouts, speech bubbles, camera shots, and comic pages.</span>
+          <span class="module-meta">panels · PNG · script</span>
+        </button>
+      </section>
+
+      <section class="panel module-preview" aria-live="polite">
+        <div class="preview-header">
+          <div>
+            <p class="eyebrow">Selected module</p>
+            <h2 id="previewTitle">Nothing selected yet</h2>
+          </div>
+          <span id="previewBadge" class="preview-badge">Ready</span>
+        </div>
+        <p id="previewText">Tap any module above to preview what it will become.</p>
+        <div class="option-row" id="previewOptions"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Made for <strong>LogansCreations</strong> on GitHub Pages.</p>
+      <p class="repo-url">https://lordboby-crypto.github.io/LogansCreations/</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
