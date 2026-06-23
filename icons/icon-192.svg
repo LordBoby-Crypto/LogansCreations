@@ -1,12 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
-  <rect width="192" height="192" rx="34" fill="#190403"/>
-  <rect x="18" y="18" width="156" height="156" rx="20" fill="#3a0d0b"/>
-  <path d="M18 125h156v49H18z" fill="#ff5a00"/>
-  <path d="M18 138h156v36H18z" fill="#ffb000" opacity=".8"/>
-  <path d="M18 18h156v42H18z" fill="#581c87" opacity=".78"/>
-  <g opacity=".5" stroke="#ffb86b" stroke-width="4">
-    <path d="M18 60h156M18 102h156M60 18v156M102 18v156M144 18v156"/>
-  </g>
-  <rect x="50" y="55" width="92" height="82" rx="8" fill="#120504" stroke="#ffb86b" stroke-width="5"/>
-  <text x="96" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" font-weight="900" fill="#ffe4b4">LC</text>
+  <defs>
+    <linearGradient id="g" x1="24" y1="20" x2="168" y2="172" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8b5cf6"/>
+      <stop offset="0.55" stop-color="#22d3ee"/>
+      <stop offset="1" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" rx="44" fill="#070a12"/>
+  <rect x="18" y="18" width="156" height="156" rx="36" fill="url(#g)"/>
+  <circle cx="144" cy="44" r="18" fill="rgba(255,255,255,0.28)"/>
+  <text x="96" y="113" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="900" fill="white">LC</text>
 </svg>
